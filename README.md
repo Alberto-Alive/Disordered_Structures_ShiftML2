@@ -18,7 +18,7 @@
   
   Windows
   Install WSL2 (Windows Subsystem for Linux 2). The scripts were tested using Ubuntu 22.042.2 LTS.
-  Create a conda environment where you install all the dependencies (ShiftML2, Soprano, Click, etc).
+  Create a conda environment where you install all the dependencies (ShiftML2, Soprano, ASE, Click, Matplotlib, Numpy, Pandas etc).
       
   ## 2. Get ShiftML2 models
   ShiftML2 models are pretrained models for predicting chemical shifts for specific chemical elements: C, Ca, Cl, F, H, K, Mg, N, Na, O, P, S.

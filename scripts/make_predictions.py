@@ -3,7 +3,6 @@ from datetime import datetime
 
 import ase
 import ase.io
-import matplotlib.pyplot as plt
 import numpy as np
 import click
 
