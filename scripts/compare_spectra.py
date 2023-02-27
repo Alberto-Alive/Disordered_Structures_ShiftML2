@@ -1,5 +1,3 @@
-import os
-
 import numpy as np
 import seaborn as sns
 
@@ -7,7 +5,6 @@ from ase.io import read
 from soprano.properties.nmr import MSIsotropy
 from soprano.calculate.nmr import NMRCalculator
 
-from itertools import combinations
 import matplotlib.pyplot as plt
 import click
 
