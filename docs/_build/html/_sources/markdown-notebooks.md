@@ -18,7 +18,9 @@ All commands can be seen if you run:
 ```{code-cell} 
 python script_name.py --help 
 ```
-# Visual guide
+## Visual guide
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S_f2qV2_U00?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 
 ## Make predictions
