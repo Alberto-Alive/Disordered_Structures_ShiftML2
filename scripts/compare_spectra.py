@@ -207,3 +207,4 @@ def compare_spectra(chemical_element, title, freq_broad, bins_count, weights=Non
 
 if __name__ == '__main__':
     compare_spectra()
+    

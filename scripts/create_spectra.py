@@ -47,7 +47,7 @@ def validate_input(title, chemical_element, path_to_magres, frequency_range ):
 
 
 
-def output_spectra(chemical_element,  freq_broad, bins_count, path_to_magres=None, reference=None, title=None, frequency_range=None):
+def create_spectra(chemical_element,  freq_broad, bins_count, path_to_magres=None, reference=None, title=None, frequency_range=None):
     """
     This function generates a 1D powder NMR spectrum for the given chemical element in the `.magres` files found in the specified path.
     
@@ -67,7 +67,7 @@ def output_spectra(chemical_element,  freq_broad, bins_count, path_to_magres=Non
     ValueError: If the specified path does not lead to a `.magres` file or a folder containing `.magres` files.
 
     Example:
-    >>> python output_spectra.py *.magres H -t custom_title -fb 0.05 -b 300 -r 0.5 -fr "{'min':0, 'max':1000}"
+    >>> python create_spectra.py *.magres H -t custom_title -fb 0.05 -b 300 -r 0.5 -fr "{'min':0, 'max':1000}"
     """
     atoms_list, frequency_range = validate_input(title = title, chemical_element = chemical_element, path_to_magres = path_to_magres, frequency_range = frequency_range )
     print('Plotting the plots..')
@@ -129,4 +129,5 @@ def output_spectra(chemical_element,  freq_broad, bins_count, path_to_magres=Non
         print(' Finished plotting.')
     print("Done!")
 if __name__ == '__main__':
-    output_spectra()
+    create_spectra()
+    

@@ -15,7 +15,7 @@ To set up WSL2: [Install Linux on Windows with WSL](https://learn.microsoft.com/
 
 ## Terminals and Distributions
 
-You can either use PowerShell(pre-installed on Windows) and Ubuntu terminal to
+You can either use PowerShell (pre-installed on Windows) and Ubuntu terminal to
 access the Linux environment. Installing [Ubuntu 22.04.2 LTS](https://apps.microsoft.com/store/detail/ubuntu-22042-lts/9PN20MSR04DW?hl=en-gb&gl=gb&rtc=1) will provide you with both the terminal and Linux distribution.
 
 ```{note}
@@ -40,7 +40,12 @@ Anaconda: primary point for installing the dependencies for developing the scrip
 | <span style="color:blue"/>**soprano**         | 0.8.13   | pypi_0             | pypi         |
 | <span style="color:blue"/>**wheel**           | 0.38.4   | pyhd8ed1ab_0       | conda-forge  |
 
-## Learn more
+## ShiftML2 models
 
-This is just a simple starter to get you started.
-You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
+ShiftML2 has trained models for the following chemical elements: C, Ca, Cl, F, H, K, Mg, N, Na, O, P, S.
+
+```{note}
+To get the models go to: [ShiftML2 Models](https://zenodo.org/record/6782654). </br>
+Model files are placed under a 'models' folder at the root of the project.</br>
+Scripts were developed and tested only for the H chemical element!
+```
