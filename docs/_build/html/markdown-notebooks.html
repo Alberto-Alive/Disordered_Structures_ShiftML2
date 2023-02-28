@@ -351,20 +351,32 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-example-cell">
-   An example cell
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Commands
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">
-   Create a notebook with MyST Markdown
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visual-guide">
+   Visual guide
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">
-   Quickly add YAML metadata for MyST Notebooks
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#make-predictions">
+     Make predictions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-spectra">
+     Create spectra
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-spectra">
+     Compare spectra
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -385,20 +397,32 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-example-cell">
-   An example cell
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Commands
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">
-   Create a notebook with MyST Markdown
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visual-guide">
+   Visual guide
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">
-   Quickly add YAML metadata for MyST Notebooks
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#make-predictions">
+     Make predictions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-spectra">
+     Create spectra
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-spectra">
+     Compare spectra
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -412,47 +436,56 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="commands">
 <h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">#</a></h1>
-<p>Jupyter Book also lets you write text-based notebooks using MyST Markdown.
-See <a class="reference external" href="https://jupyterbook.org/file-types/myst-notebooks.html">the Commands documentation</a> for more detailed instructions.
-This page shows off a notebook written in MyST Markdown.</p>
-<section id="an-example-cell">
-<h2>An example cell<a class="headerlink" href="#an-example-cell" title="Permalink to this headline">#</a></h2>
-<p>With MyST Markdown, you can define code cells with a directive like so:</p>
+<p>All commands can be seen if you run:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">script_name</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="n">python</span> <span class="n">script_name</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
+           <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
 </div>
-<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Jupyter Book uses <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a> to convert text-based files to notebooks, and can support <a class="reference external" href="https://jupyterbook.org/file-types/jupytext.html">many other text-based notebook files</a>.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="visual-guide">
+<h1>Visual guide<a class="headerlink" href="#visual-guide" title="Permalink to this headline">#</a></h1>
+<section id="make-predictions">
+<h2>Make predictions<a class="headerlink" href="#make-predictions" title="Permalink to this headline">#</a></h2>
+<p>Script name: make_predictions.py</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">make_predictions</span><span class="o">.</span><span class="n">py</span> <span class="o">*.</span><span class="n">xyz</span> <span class="o">./</span><span class="n">example</span><span class="o">/</span><span class="n">ababub_xyz_files</span><span class="o">/*.</span><span class="n">xyz</span> <span class="n">H</span> <span class="o">-</span><span class="n">ase</span> <span class="s2">&quot;{&#39;index&#39; : &#39;:&#39;}&quot;</span> <span class="o">-</span><span class="n">s</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
-<section id="create-a-notebook-with-myst-markdown">
-<h2>Create a notebook with MyST Markdown<a class="headerlink" href="#create-a-notebook-with-myst-markdown" title="Permalink to this headline">#</a></h2>
-<p>MyST Markdown notebooks are defined by two things:</p>
-<ol class="simple">
-<li><p>YAML metadata that is needed to understand if / how it should convert text files to notebooks (including information about the kernel needed).
-See the YAML at the top of this page for example.</p></li>
-<li><p>The presence of <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directives, which will be executed with your book.</p></li>
-</ol>
-<p>That’s all that is needed to get started!</p>
-</section>
-<section id="quickly-add-yaml-metadata-for-myst-notebooks">
-<h2>Quickly add YAML metadata for MyST Notebooks<a class="headerlink" href="#quickly-add-yaml-metadata-for-myst-notebooks" title="Permalink to this headline">#</a></h2>
-<p>If you have a markdown file and you’d like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">markdownfile</span><span class="o">.</span><span class="n">md</span>
+<section id="create-spectra">
+<h2>Create spectra<a class="headerlink" href="#create-spectra" title="Permalink to this headline">#</a></h2>
+<p>Script name: create_spectra.py</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">create_spectra</span><span class="o">.</span><span class="n">py</span> <span class="o">*.</span><span class="n">magres</span> <span class="n">H</span> <span class="o">-</span><span class="n">t</span> <span class="n">custom_title</span> <span class="o">-</span><span class="n">fb</span> <span class="mf">0.05</span> <span class="o">-</span><span class="n">b</span> <span class="mi">300</span> <span class="o">-</span><span class="n">r</span> <span class="mf">0.5</span> <span class="o">-</span><span class="n">fr</span> <span class="s2">&quot;{&#39;min&#39;:10, &#39;max&#39;:35}&quot;</span>
 </pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-spectra">
+<h2>Compare spectra<a class="headerlink" href="#compare-spectra" title="Permalink to this headline">#</a></h2>
+<p>Script name: compare_spectra.py</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">compare_spectra</span><span class="o">.</span><span class="n">py</span> <span class="o">*.</span><span class="n">magres</span> <span class="n">H</span> <span class="o">-</span><span class="n">t</span> <span class="n">custom_title</span> <span class="o">-</span><span class="n">fb</span> <span class="mf">0.05</span> <span class="o">-</span><span class="n">b</span> <span class="mi">300</span> <span class="o">-</span><span class="n">r</span> <span class="mf">0.5</span> <span class="o">-</span><span class="n">w</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="n">fr</span> <span class="s2">&quot;{&#39;min&#39;:10, &#39;max&#39;:35}&quot;</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>

@@ -3,42 +3,40 @@
 
 # # Commands
 # 
-# Jupyter Book also lets you write text-based notebooks using MyST Markdown.
-# See [the Commands documentation](https://jupyterbook.org/file-types/myst-notebooks.html) for more detailed instructions.
-# This page shows off a notebook written in MyST Markdown.
-# 
-# ## An example cell
-# 
-# With MyST Markdown, you can define code cells with a directive like so:
+# All commands can be seen if you run:
 
 # In[1]:
 
 
-print(2 + 2)
+python script_name.py --help 
 
 
-# When your book is built, the contents of any `{code-cell}` blocks will be
-# executed with your default Jupyter kernel, and their outputs will be displayed
-# in-line with the rest of your content.
+# # Visual guide
 # 
-# ```{seealso}
-# Jupyter Book uses [Jupytext](https://jupytext.readthedocs.io/en/latest/) to convert text-based files to notebooks, and can support [many other text-based notebook files](https://jupyterbook.org/file-types/jupytext.html).
-# ```
 # 
-# ## Create a notebook with MyST Markdown
-# 
-# MyST Markdown notebooks are defined by two things:
-# 
-# 1. YAML metadata that is needed to understand if / how it should convert text files to notebooks (including information about the kernel needed).
-#    See the YAML at the top of this page for example.
-# 2. The presence of `{code-cell}` directives, which will be executed with your book.
-# 
-# That's all that is needed to get started!
-# 
-# ## Quickly add YAML metadata for MyST Notebooks
-# 
-# If you have a markdown file and you'd like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:
-# 
-# ```
-# jupyter-book myst init path/to/markdownfile.md
-# ```
+# ## Make predictions
+# Script name: make_predictions.py
+
+# In[ ]:
+
+
+python make_predictions.py *.xyz ./example/ababub_xyz_files/*.xyz H -ase "{'index' : ':'}" -s
+
+
+# ## Create spectra
+# Script name: create_spectra.py
+
+# In[ ]:
+
+
+python create_spectra.py *.magres H -t custom_title -fb 0.05 -b 300 -r 0.5 -fr "{'min':10, 'max':35}"
+
+
+# ## Compare spectra
+# Script name: compare_spectra.py
+
+# In[ ]:
+
+
+python compare_spectra.py *.magres H -t custom_title -fb 0.05 -b 300 -r 0.5 -w [1, 4, 0, 2, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 1] -fr "{'min':10, 'max':35}"
+

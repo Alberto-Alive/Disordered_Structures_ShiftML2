@@ -4,7 +4,7 @@
   **Predict the chemical shift for a set of xyz files containing your chemical structures**
   - outputs a magres file for each xyz file and a csv file containing all the predictions run on the xyz files
   
-  ## Output spectra
+  ## Create spectra
   **Create a spectrum for each magres file**
   - outputs a png file for each magres file
   
@@ -30,8 +30,8 @@
   
     python make_predictions.py *.xyz ./example/ababub_xyz_files/*.xyz H -ase "{'index' : ':'}" -s
   
-  ## 2. Output spectra: output_spectra.py
-    python output_spectra.py *.magres H -t custom_title -fb 0.05 -b 300 -r 0.5 -fr "{'min':10, 'max':35}"
+  ## 2. Create spectra: Create_spectra.py
+    python create_spectra.py *.magres H -t custom_title -fb 0.05 -b 300 -r 0.5 -fr "{'min':10, 'max':35}"
   
   ## 3. Compare spectra: compare_spectra.py
     python compare_spectra.py *.magres H -t custom_title -fb 0.05 -b 300 -r 0.5 -w [1, 4, 0, 2, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 1] -fr "{'min':10, 'max':35}"
