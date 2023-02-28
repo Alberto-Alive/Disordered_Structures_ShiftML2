@@ -1,57 +1,22 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Scripts
-# 
-# You can also create content with Jupyter Notebooks. This means that you can include
-# code blocks and their outputs in your book.
-# 
-# ## Markdown + notebooks
-# 
-# As it is markdown, you can embed images, HTML, etc into your posts!
-# 
-# ![](https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg)
-# 
-# You can also $add_{math}$ and
-# 
-# $$
-# math^{blocks}
-# $$
-# 
-# or
-# 
-# $$
-# \begin{aligned}
-# \mbox{mean} la_{tex} \\ \\
-# math blocks
-# \end{aligned}
-# $$
-# 
-# But make sure you \$Escape \$your \$dollar signs \$you want to keep!
-# 
-# ## MyST markdown
-# 
-# MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
-# out [the MyST guide in Jupyter Book](https://jupyterbook.org/content/myst.html),
-# or see [the MyST markdown documentation](https://myst-parser.readthedocs.io/en/latest/).
-# 
-# ## Code blocks and outputs
-# 
-# Jupyter Book will also embed your code blocks and output in your book.
-# For example, here's some sample Matplotlib code:
-
-# In[1]:
-
-
-from matplotlib import rcParams, cycler
-import matplotlib.pyplot as plt
-import numpy as np
-plt.ion()
-
-
-# In[2]:
-
-
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\SMLv2\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
+    executenb(
+  File "C:\ProgramData\Anaconda3\envs\SMLv2\lib\site-packages\nbclient\client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\ProgramData\Anaconda3\envs\SMLv2\lib\site-packages\nbclient\util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "C:\ProgramData\Anaconda3\envs\SMLv2\lib\site-packages\nbclient\util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "C:\ProgramData\Anaconda3\envs\SMLv2\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+  File "C:\ProgramData\Anaconda3\envs\SMLv2\lib\site-packages\nbclient\client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "C:\ProgramData\Anaconda3\envs\SMLv2\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\ProgramData\Anaconda3\envs\SMLv2\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
 # Name                    Version                   Build  Channel
 alabaster                 0.7.13                   pypi_0    pypi
 anyio                     3.6.2                    pypi_0    pypi
@@ -262,30 +227,12 @@ xz                        5.2.6                h8d14728_0    conda-forge
 zeromq                    4.3.4                h0e60522_1    conda-forge
 zipp                      3.10.0             pyhd8ed1ab_0    conda-forge
 zstd                      1.5.2                h7755175_4    conda-forge
+------------------
 
+[1;36m  Cell [1;32mIn [2], line 56[1;36m[0m
+[1;33m    jpeg                      9e                   h8ffe710_2    conda-forge[0m
+[1;37m                              ^[0m
+[1;31mSyntaxError[0m[1;31m:[0m invalid decimal literal
 
-# In[ ]:
+SyntaxError: invalid decimal literal (1497995226.py, line 56)
 
-
-# Fixing random state for reproducibility
-np.random.seed(19680801)
-
-N = 10
-data = [np.logspace(0, 1, 100) + np.random.randn(100) + ii for ii in range(N)]
-data = np.array(data).T
-cmap = plt.cm.coolwarm
-rcParams['axes.prop_cycle'] = cycler(color=cmap(np.linspace(0, 1, N)))
-
-
-from matplotlib.lines import Line2D
-custom_lines = [Line2D([0], [0], color=cmap(0.), lw=4),
-                Line2D([0], [0], color=cmap(.5), lw=4),
-                Line2D([0], [0], color=cmap(1.), lw=4)]
-
-fig, ax = plt.subplots(figsize=(10, 5))
-lines = ax.plot(data)
-ax.legend(custom_lines, ['Cold', 'Medium', 'Hot']);
-
-
-# There is a lot more that you can do with outputs (such as including interactive outputs)
-# with your book. For more information about this, see [the Jupyter Book documentation](https://jupyterbook.org)

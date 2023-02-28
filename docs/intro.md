@@ -1,11 +1,7 @@
 # Overview
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Use this scripts pack to predict chemical shifts in disordered structures through [ShiftML2](https://pubs.acs.org/doi/10.1021/acs.jpcc.2c03854). The project was funded by [STFC (CCP-NC)](https://www.ukri.org/councils/stfc/) and developed by [Popescu Alberto](https://github.com/Alberto-Alive) under [Shenton Kane's](https://github.com/jkshenton) guidance. Free to use under [MIT](https://github.com/Alberto-Alive/Disordered_Structures_ShiftML2/blob/origins/MIT-LICENCE.txt) licence.
 
-Check out the content pages bundled with this sample book to see more.
-
+Contents:
 ```{tableofcontents}
 ```
