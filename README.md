@@ -1,6 +1,6 @@
 # Tutorial
 
-*Check the tutorial at* [Disordered Structures ShiftML2](https://github.com/Alberto-Alive/Disordered_Structures_ShiftML2).
+*Check the tutorial at* [Disordered Structures ShiftML2](https://alberto-alive.github.io/Disordered_Structures_ShiftML2/intro.html).
 
 
 # Scripts overview
