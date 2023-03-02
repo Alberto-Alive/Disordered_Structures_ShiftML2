@@ -423,20 +423,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="commands">
 <h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">#</a></h1>
 <p>All commands can be seen if you run:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">script_name</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span> 
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">script_name</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span> 
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-    <span class="n">python</span> <span class="n">script_name</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
-           <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
 </div>
 <section id="visual-guide">
 <h2>Visual guide<a class="headerlink" href="#visual-guide" title="Permalink to this headline">#</a></h2>
@@ -445,34 +433,22 @@ title="Print to PDF"
 <section id="make-predictions">
 <h2>Make predictions<a class="headerlink" href="#make-predictions" title="Permalink to this headline">#</a></h2>
 <p>Script name: make_predictions.py</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">make_predictions</span><span class="o">.</span><span class="n">py</span> <span class="o">*.</span><span class="n">xyz</span> <span class="o">./</span><span class="n">example</span><span class="o">/</span><span class="n">ababub_xyz_files</span><span class="o">/*.</span><span class="n">xyz</span> <span class="n">H</span> <span class="o">-</span><span class="n">ase</span> <span class="s2">&quot;{&#39;index&#39; : &#39;:&#39;}&quot;</span> <span class="o">-</span><span class="n">s</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">make_predictions</span><span class="o">.</span><span class="n">py</span> <span class="o">*.</span><span class="n">xyz</span> <span class="o">./</span><span class="n">example</span><span class="o">/</span><span class="n">ababub_xyz_files</span><span class="o">/*.</span><span class="n">xyz</span> <span class="n">H</span> <span class="o">-</span><span class="n">ase</span> <span class="s2">&quot;{&#39;index&#39; : &#39;:&#39;}&quot;</span> <span class="o">-</span><span class="n">s</span>
 </pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="create-spectra">
 <h2>Create spectra<a class="headerlink" href="#create-spectra" title="Permalink to this headline">#</a></h2>
 <p>Script name: create_spectra.py</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">create_spectra</span><span class="o">.</span><span class="n">py</span> <span class="o">*.</span><span class="n">magres</span> <span class="n">H</span> <span class="o">-</span><span class="n">t</span> <span class="n">custom_title</span> <span class="o">-</span><span class="n">fb</span> <span class="mf">0.05</span> <span class="o">-</span><span class="n">b</span> <span class="mi">300</span> <span class="o">-</span><span class="n">r</span> <span class="mf">0.5</span> <span class="o">-</span><span class="n">fr</span> <span class="s2">&quot;{&#39;min&#39;:10, &#39;max&#39;:35}&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">create_spectra</span><span class="o">.</span><span class="n">py</span> <span class="o">*.</span><span class="n">magres</span> <span class="n">H</span> <span class="o">-</span><span class="n">t</span> <span class="n">custom_title</span> <span class="o">-</span><span class="n">fb</span> <span class="mf">0.05</span> <span class="o">-</span><span class="n">b</span> <span class="mi">300</span> <span class="o">-</span><span class="n">r</span> <span class="mf">0.5</span> <span class="o">-</span><span class="n">fr</span> <span class="s2">&quot;{&#39;min&#39;:10, &#39;max&#39;:35}&quot;</span>
 </pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="compare-spectra">
 <h2>Compare spectra<a class="headerlink" href="#compare-spectra" title="Permalink to this headline">#</a></h2>
 <p>Script name: compare_spectra.py</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">compare_spectra</span><span class="o">.</span><span class="n">py</span> <span class="o">*.</span><span class="n">magres</span> <span class="n">H</span> <span class="o">-</span><span class="n">t</span> <span class="n">custom_title</span> <span class="o">-</span><span class="n">fb</span> <span class="mf">0.05</span> <span class="o">-</span><span class="n">b</span> <span class="mi">300</span> <span class="o">-</span><span class="n">r</span> <span class="mf">0.5</span> <span class="o">-</span><span class="n">w</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="n">fr</span> <span class="s2">&quot;{&#39;min&#39;:10, &#39;max&#39;:35}&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">compare_spectra</span><span class="o">.</span><span class="n">py</span> <span class="o">*.</span><span class="n">magres</span> <span class="n">H</span> <span class="o">-</span><span class="n">t</span> <span class="n">custom_title</span> <span class="o">-</span><span class="n">fb</span> <span class="mf">0.05</span> <span class="o">-</span><span class="n">b</span> <span class="mi">300</span> <span class="o">-</span><span class="n">r</span> <span class="mf">0.5</span> <span class="o">-</span><span class="n">w</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span><span class="n">fr</span> <span class="s2">&quot;{&#39;min&#39;:10, &#39;max&#39;:35}&quot;</span>
 </pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>

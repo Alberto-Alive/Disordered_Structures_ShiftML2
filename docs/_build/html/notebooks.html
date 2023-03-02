@@ -401,9 +401,7 @@ title="Print to PDF"
 <h2>Make predictions<a class="headerlink" href="#make-predictions" title="Permalink to this headline">#</a></h2>
 <p>Predict the chemical shift for a set of xyz files containing your chemical structures.</p>
 <p>Outputs a magres file for each xyz file and a csv file containing all the predictions run on the xyz files.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="kn">import</span> <span class="nn">ase</span>
@@ -415,38 +413,7 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">time</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\ProgramData\Anaconda3\envs\SMLv2\lib\site-packages\rascal\calibrator.py:9: TqdmExperimentalWarning: Using `tqdm.autonotebook.tqdm` in notebook mode. Use `tqdm.tqdm` instead to force console mode (e.g. in jupyter console)
-  from tqdm.autonotebook import tqdm
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">click</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">ShiftML2</span> <span class="k">as</span> <span class="nn">sml</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">import</span> <span class="nn">time</span>
-
-<span class="n">File</span> <span class="n">C</span><span class="p">:</span>\<span class="n">ProgramData</span>\<span class="n">Anaconda3</span>\<span class="n">envs</span>\<span class="n">SMLv2</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">ShiftML2</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">.ShiftML2</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="n">File</span> <span class="n">C</span><span class="p">:</span>\<span class="n">ProgramData</span>\<span class="n">Anaconda3</span>\<span class="n">envs</span>\<span class="n">SMLv2</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">ShiftML2</span>\<span class="n">ShiftML2</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">16</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">import</span> <span class="nn">copy</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="kn">import</span> <span class="nn">rascal</span>
-<span class="ne">---&gt; </span><span class="mi">16</span> <span class="kn">import</span> <span class="nn">rascal.representations</span> <span class="k">as</span> <span class="nn">rep</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="c1"># Setting the model directory</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;/model_dir.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">F</span><span class="p">:</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;rascal.representations&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">validate_input</span><span class="p">(</span><span class="n">ase_params</span><span class="p">,</span> <span class="n">xyz_files_paths</span><span class="p">,</span> <span class="n">chemical_element</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">validate_input</span><span class="p">(</span><span class="n">ase_params</span><span class="p">,</span> <span class="n">xyz_files_paths</span><span class="p">,</span> <span class="n">chemical_element</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">xyz_files_paths</span><span class="p">:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.xyz&quot;</span><span class="p">):</span>
             <span class="k">raise</span> <span class="n">click</span><span class="o">.</span><span class="n">BadParameter</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> is not a valid path targetting an .xyz file.&quot;</span><span class="p">)</span>
@@ -465,11 +432,7 @@ title="Print to PDF"
     <span class="k">return</span> <span class="n">ase_params</span> 
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">argument</span><span class="p">(</span><span class="s2">&quot;xyz_files_paths&quot;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">click</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">exists</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">argument</span><span class="p">(</span><span class="s1">&#39;chemical-element&#39;</span><span class="p">)</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">&quot;--ase_params&quot;</span><span class="p">,</span> <span class="s1">&#39;-ase&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span> <span class="p">:</span> <span class="s1">&#39;:&#39;</span><span class="p">},</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;ASE parameters for the structure. The dictionary should have the form: </span><span class="se">\&quot;</span><span class="s2">{&#39;index&#39; : &#39;:&#39;}</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -486,11 +449,7 @@ title="Print to PDF"
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Following structure </span><span class="si">{</span><span class="n">structure</span><span class="si">}</span><span class="s2"> was initialised. Use -s flag to start the script.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ChemicalStructure</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ChemicalStructure</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;ChemicalStructure class</span>
 
 <span class="sd">       A class representing the structure of a molecule.This class will</span>
@@ -510,6 +469,7 @@ title="Print to PDF"
 <span class="sd">    Example:</span>
 <span class="sd">    &gt;&gt;&gt; python ChemicalStructure.py *.xyz ./fake_folder/*.xyz H -ase &quot;{&#39;index&#39; : &#39;:&#39;}&quot; -s</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
 
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chemical_element</span><span class="p">,</span> <span class="n">xyz_files_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ase_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span> <span class="p">:</span> <span class="s1">&#39;:&#39;</span><span class="p">}):</span>
@@ -747,16 +707,12 @@ title="Print to PDF"
     <span class="n">cli</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-</div>
 </section>
 <section id="create-spectra">
 <h2>Create spectra<a class="headerlink" href="#create-spectra" title="Permalink to this headline">#</a></h2>
 <p>Create a spectrum for each magres file.</p>
 <p>Outputs a png file for each magres file.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">click</span>
@@ -767,11 +723,7 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">validate_input</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">chemical_element</span><span class="p">,</span> <span class="n">path_to_magres</span><span class="p">,</span> <span class="n">frequency_range</span> <span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">validate_input</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">chemical_element</span><span class="p">,</span> <span class="n">path_to_magres</span><span class="p">,</span> <span class="n">frequency_range</span> <span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The following </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2"> is not a string.&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">:</span>
@@ -800,11 +752,7 @@ title="Print to PDF"
     <span class="k">return</span> <span class="n">atoms_list</span><span class="p">,</span> <span class="n">frequency_range</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">argument</span><span class="p">(</span><span class="s1">&#39;path_to_magres&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">click</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">exists</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">argument</span><span class="p">(</span><span class="s1">&#39;chemical-element&#39;</span><span class="p">)</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s1">&#39;--freq_broad&#39;</span><span class="p">,</span> <span class="s1">&#39;-fb&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;The frequency broadening factor to use. [required]&#39;</span><span class="p">)</span>
@@ -814,11 +762,7 @@ title="Print to PDF"
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s1">&#39;--frequency_range&#39;</span><span class="p">,</span> <span class="s1">&#39;-fr&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;A dictionary specifying the minimum and maximum frequency to use in the spectrum. The keys should be &quot;min&quot; and &quot;max&quot;.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_spectra</span><span class="p">(</span><span class="n">chemical_element</span><span class="p">,</span>  <span class="n">freq_broad</span><span class="p">,</span> <span class="n">bins_count</span><span class="p">,</span> <span class="n">path_to_magres</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">frequency_range</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_spectra</span><span class="p">(</span><span class="n">chemical_element</span><span class="p">,</span>  <span class="n">freq_broad</span><span class="p">,</span> <span class="n">bins_count</span><span class="p">,</span> <span class="n">path_to_magres</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">frequency_range</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function generates a 1D powder NMR spectrum for the given chemical element in the `.magres` files found in the specified path.</span>
 <span class="sd">    </span>
@@ -903,16 +847,12 @@ title="Print to PDF"
     <span class="n">create_spectra</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-</div>
 </section>
 <section id="compare-spectra">
 <h2>Compare spectra<a class="headerlink" href="#compare-spectra" title="Permalink to this headline">#</a></h2>
 <p>Calculate the non/weighted average spectrum across all magres files and identify similar spectra using a heatmap and a plot of subplots.</p>
 <p>Outputs a png file for the non/weighted average spectrum and for the plot of stacked spectra and for the heatmap.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
 <span class="kn">from</span> <span class="nn">ase.io</span> <span class="kn">import</span> <span class="n">read</span>
@@ -923,11 +863,7 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">click</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">validate_input</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">chemical_element</span><span class="p">,</span> <span class="n">path_to_magres</span><span class="p">,</span> <span class="n">frequency_range</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">validate_input</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">chemical_element</span><span class="p">,</span> <span class="n">path_to_magres</span><span class="p">,</span> <span class="n">frequency_range</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The following </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2"> is not a string.&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">title</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">:</span>
@@ -966,11 +902,7 @@ title="Print to PDF"
     <span class="k">return</span> <span class="n">atoms_list</span><span class="p">,</span> <span class="n">frequency_range</span><span class="p">,</span> <span class="n">weights</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@click</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">argument</span><span class="p">(</span><span class="s1">&#39;path_to_magres&#39;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">click</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">exists</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">argument</span><span class="p">(</span><span class="s1">&#39;chemical-element&#39;</span><span class="p">)</span>
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s1">&#39;--title&#39;</span><span class="p">,</span> <span class="s1">&#39;-t&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Title of the average spectra. [required]&#39;</span><span class="p">)</span>
@@ -981,11 +913,7 @@ title="Print to PDF"
 <span class="nd">@click</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s1">&#39;--frequency-range&#39;</span><span class="p">,</span> <span class="s1">&#39;-fr&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Dictionary specifying the maximum and minimum frequency range to use (use double quotes around the dict). If not provided, range is calculated using chemical element.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compare_spectra</span><span class="p">(</span><span class="n">chemical_element</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">freq_broad</span><span class="p">,</span> <span class="n">bins_count</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path_to_magres</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">frequency_range</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compare_spectra</span><span class="p">(</span><span class="n">chemical_element</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">freq_broad</span><span class="p">,</span> <span class="n">bins_count</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path_to_magres</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">frequency_range</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function computes the average spectra of chemical element over multiple &quot;.magres&quot; files.</span>
 <span class="sd">    </span>
@@ -1136,8 +1064,6 @@ title="Print to PDF"
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">compare_spectra</span><span class="p">()</span>
 </pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
