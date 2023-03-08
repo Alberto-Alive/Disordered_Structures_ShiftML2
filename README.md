@@ -1,3 +1,7 @@
+# Disordered Structures ShiftML2
+**This project was funded by STFC(CCP-NC), UK.**</br>
+**Please note that we are not associated with the ShiftML2 group.**
+
 # Tutorial
 
 *Check the tutorial at* [Disordered Structures ShiftML2](https://alberto-alive.github.io/Disordered_Structures_ShiftML2/intro.html).
